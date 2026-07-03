@@ -1,3 +1,26 @@
 h1{
-    color : palevioletred;
+    color :  rgb(251, 0, 255);
+}
+
+/* property: value */
+
+#home-intro{
+    text-align :center;
+
+    /* border: 3px;
+    border-color : black;
+    border-style: solid; */
+
+    border:3px solid rgb(214, 88, 216);
+
+    /* background-color: rgb(137, 137, 137); */
+}
+
+#home-intro:hover{
+    background-color: rgb(133, 133, 133);
+}
+
+
+#p2{
+    color: blueviolet;
 }
