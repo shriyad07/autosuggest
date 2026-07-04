@@ -14,3 +14,30 @@
     text-align: center;
     margin-top: 90px;
 }
+
+.tag-line{
+    font-size: 20px;
+    color: #4a4a4a;
+}
+
+.auto {
+  color: rgb(51, 130, 247);
+}
+
+.lens{
+    position: relative;
+    left: 40px;
+
+}
+.search-bar{
+   padding: 15px 15px 15px 45px;
+   border-radius: 30px;
+   width: 50%;
+
+}
+
+#suggestion-box{
+    border: 1px solid #050505;
+    width: 50%;
+    margin-left: 25%;
+}
