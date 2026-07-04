@@ -19,13 +19,53 @@
         <p class = "tag-line">One million phrases. Four algorithms. Prefix Based Auto Suggest.</p>
         <span>
             <span class = "lens">&#128269;</span>
-            <input class = "search-bar" placeholder=" Start typing to search...">
+            <input class = "search-bar"  id = "search-bar" placeholder=" Start typing to search...">
         </span>
 
         <div id = "suggestion-box"> 
-            
-            Suggestions will appear here
+
+            <!-- Suggestions will appear here -->
         </div>
     </div>
+
+    <script>
+        var searchBar = document.getElementById("search-bar");
+var suggestionBox = document.getElementById("suggestion-box");
+
+searchBar.addEventListener("input", function() {
+    // Get user typed text
+    var userInput = searchBar.value;
+
+    if (userInput.trim() === '') {
+        suggestionBox.innerHTML = "";
+        return;
+    } else {
+        var url1 = "https://autosuggest-backend.onrender.com/api/autosuggest?q=";
+        var url3 = "&algorithm=brute&limit=10&weighted=false";
+        var url = url1 + userInput + url3;
+
+        // Make API call to get suggestions
+        fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                console.log(data);
+
+                var resultsArray = data.results;
+                var htmlResults = "";
+
+                for (var i = 0; i < resultsArray.length; i++) {
+                    htmlResults += "<div class='suggestion-item'>" + resultsArray[i].text + "</div>";
+                }
+
+                suggestionBox.innerHTML = htmlResults;
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    }
+});
+    </script>
 </body>
 </html>
