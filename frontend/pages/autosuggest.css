@@ -1,0 +1,16 @@
+.left-bar{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.right-bar{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.search-section{
+    text-align: center;
+    margin-top: 90px;
+}
