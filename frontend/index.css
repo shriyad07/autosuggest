@@ -41,10 +41,16 @@ h1{
 }
 
 #card{
-    padding-top: 10px;
+    /* padding-top: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 300px;
+    height: 580px;
+    border: 3px solid rgb(2, 46, 83);
+    margin: 3px auto;
+    border-radius: 8px;
+
 }
 
 #card-img{
@@ -58,6 +64,7 @@ img{
     height: 300px;
     display: block;
     margin: 0 auto;
+    border-radius: 8px;
 }
 
 #card-name{
@@ -70,4 +77,11 @@ img{
 
 #action{
     text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+button{
+    padding: 10px 20px;
+    width: 100%;
 }
